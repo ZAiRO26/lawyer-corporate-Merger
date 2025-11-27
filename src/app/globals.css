@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
@@ -8,7 +12,33 @@
   --color-gold-500: #d4af37;
   --color-gold-600: #bfa132;
   
+  --color-cream-50: #FDFBF7;
+  --color-cream-100: #F7F3E8;
+  --color-cream-200: #EFE9D5;
+  --color-cream-300: #E6DCC0;
+  --color-cream-900: #4A4028;
+
   --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
+}
+
+@layer base {
+  :root {
+    --background: var(--color-cream-50);
+    --foreground: var(--color-slate-900);
+  }
+
+  .dark {
+    --background: var(--color-slate-950);
+    --foreground: var(--color-slate-50);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
 }
 
 @keyframes fade-in-up {

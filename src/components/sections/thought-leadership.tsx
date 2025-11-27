@@ -27,17 +27,17 @@ const articles = [
 
 export function ThoughtLeadership() {
   return (
-    <Section id="thought-leadership" className="bg-slate-950">
+    <Section id="thought-leadership" className="bg-cream-50 dark:bg-slate-950 transition-colors duration-500">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
-          <span className="text-gold-500 font-semibold tracking-widest uppercase text-sm">
+          <span className="text-gold-600 dark:text-gold-500 font-semibold tracking-widest uppercase text-sm">
             Insights
           </span>
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mt-4">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 dark:text-white mt-4">
             Thought Leadership
           </h2>
         </div>
-        <button className="text-white border-b border-gold-500 pb-1 hover:text-gold-500 transition-colors flex items-center gap-2">
+        <button className="text-slate-900 dark:text-white border-b border-gold-500 pb-1 hover:text-gold-600 dark:hover:text-gold-500 transition-colors flex items-center gap-2">
           View All Insights <ArrowRight size={16} />
         </button>
       </div>
@@ -52,21 +52,21 @@ export function ThoughtLeadership() {
             transition={{ delay: index * 0.2 }}
             className="group cursor-pointer"
           >
-            <div className="relative aspect-[4/3] overflow-hidden mb-6 bg-slate-800">
+            <div className="relative aspect-[4/3] overflow-hidden mb-6 bg-cream-200 dark:bg-slate-800">
               <img
                 src={article.image}
                 alt={article.title}
                 className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors duration-500" />
+              <div className="absolute inset-0 bg-black/10 dark:bg-slate-950/20 group-hover:bg-transparent transition-colors duration-500" />
             </div>
             
             <div className="flex items-center gap-4 text-xs font-semibold tracking-wider uppercase mb-3">
-              <span className="text-gold-500">{article.category}</span>
-              <span className="text-slate-500">{article.date}</span>
+              <span className="text-gold-600 dark:text-gold-500">{article.category}</span>
+              <span className="text-slate-500 dark:text-slate-500">{article.date}</span>
             </div>
             
-            <h3 className="text-xl font-serif font-bold text-white group-hover:text-gold-500 transition-colors duration-300 leading-tight">
+            <h3 className="text-xl font-serif font-bold text-slate-900 dark:text-white group-hover:text-gold-600 dark:group-hover:text-gold-500 transition-colors duration-300 leading-tight">
               {article.title}
             </h3>
           </motion.article>

@@ -16,7 +16,7 @@ export function Hero() {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-slate-950/70" /> {/* Overlay */}
+        <div className="absolute inset-0 bg-cream-50/80 dark:bg-slate-950/70 transition-colors duration-500" /> {/* Overlay */}
       </div>
 
       {/* Content */}
@@ -26,15 +26,15 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          <span className="inline-block py-1 px-3 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-400 text-xs md:text-sm font-semibold tracking-wider uppercase mb-6">
+          <span className="inline-block py-1 px-3 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-600 dark:text-gold-400 text-xs md:text-sm font-semibold tracking-wider uppercase mb-6">
             Global M&A Advisory
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mb-8">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-slate-900 dark:text-white leading-tight mb-8 transition-colors duration-300">
             Facilitating <br />
             <span className="text-gold-500">Strategic Mergers</span> <br />
             Globally.
           </h1>
-          <p className="text-lg md:text-xl text-slate-300 max-w-2xl mb-10 md:mx-0 mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 max-w-2xl mb-10 md:mx-0 mx-auto leading-relaxed transition-colors duration-300">
             We provide elite legal counsel for complex cross-border transactions, ensuring seamless integration and value creation for the world's leading corporations.
           </p>
           
@@ -50,7 +50,7 @@ export function Hero() {
             </Link>
             <Link 
               href="#contact"
-              className="px-8 py-4 border border-white/20 text-white font-semibold text-sm uppercase tracking-wider hover:bg-white/5 transition-colors inline-flex items-center justify-center"
+              className="px-8 py-4 border border-slate-900/20 dark:border-white/20 text-slate-900 dark:text-white font-semibold text-sm uppercase tracking-wider hover:bg-slate-900/5 dark:hover:bg-white/5 transition-colors inline-flex items-center justify-center"
             >
               Contact Us
             </Link>
@@ -63,10 +63,10 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-400"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 dark:text-slate-400"
       >
         <span className="text-[10px] uppercase tracking-widest">Scroll</span>
-        <div className="w-[1px] h-12 bg-slate-400/30 overflow-hidden">
+        <div className="w-[1px] h-12 bg-slate-900/10 dark:bg-slate-400/30 overflow-hidden">
           <motion.div 
             animate={{ y: ["-100%", "100%"] }}
             transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}

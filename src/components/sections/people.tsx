@@ -28,12 +28,12 @@ const team = [
 
 export function People() {
   return (
-    <Section id="people" className="bg-slate-900">
+    <Section id="people" className="bg-cream-100 dark:bg-slate-900 transition-colors duration-500">
       <div className="text-center mb-16 md:mb-24">
-        <span className="text-gold-500 font-semibold tracking-widest uppercase text-sm">
+        <span className="text-gold-600 dark:text-gold-500 font-semibold tracking-widest uppercase text-sm">
           Our People
         </span>
-        <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mt-4">
+        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 dark:text-white mt-4">
           Architects of Global Deals
         </h2>
       </div>
@@ -55,7 +55,7 @@ export function People() {
                 className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900 dark:from-slate-950 via-transparent to-transparent opacity-80" />
             
             <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
               <h3 className="text-lg font-serif font-bold text-white">
